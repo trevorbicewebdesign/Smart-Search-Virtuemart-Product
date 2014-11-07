@@ -325,10 +325,9 @@ class plgFinderVmproducts extends FinderIndexerAdapter
 	 *
 	 * @since   2.5
 	 */
-	protected function setup()
-	{
+	protected function setup() {
 		// Load dependent classes.
-		include_once JPATH_SITE . '/components/com_virtuemart/route.php';
+		include_once JPATH_SITE . '/administrator/components/com_virtuemart/router.php';
 
 		return true;
 	}
