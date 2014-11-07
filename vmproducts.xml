@@ -38,7 +38,7 @@
 		<file plugin="vmproducts">vmproducts.php</file>
     		<filename>index.html</filename>
 	</files>
-	<languages folder="administrator/language/en-GB">
+	<languages>
 		<language tag="en-GB">en-GB.plg_finder_vmproducts.ini</language>
 		<language tag="en-GB">en-GB.plg_finder_vmproducts.sys.ini</language>
 	</languages>
