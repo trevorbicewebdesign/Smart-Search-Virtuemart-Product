@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="finder" method="upgrade">
+	<name>plg_finder_vmproducts</name>
+	<author>Joomla! Project</author>
+	<creationDate>August 2011</creationDate>
+	<copyright>(C) 2005 - 2014 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.0</version>
+	<description>
+		<![CDATA[
+		
+		<link rel="stylesheet" href="../plugins/finder/vmproducts/assets/admin.css" type="text/css" />
+		<div id="extension-description">
+			<h1>Smart Search - Virtuemart Products</h1>
+			<p>Use the Joomla 'Smart Search' component to search for your Virtuemart Products</p>
+
+			<hr/>
+			<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+			<td valign="top">
+			Brought to you by:<br/>
+			<a href="http://webdesign.trevorbice.com/" target="_blank">
+			<img src="../media/tbworks/images/tbwebdesignlogo.png"/>
+			</a>
+			</td>
+			<td>
+			</td>
+			</tr>
+			</table>
+			
+		</div>
+		]]>
+	</description>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<file plugin="vmproducts">vmproducts.php</file>
+    	<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_finder_vmproducts.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_finder_vmproducts.sys.ini</language>
+	</languages>
+	<media folder="media" destination="tbworks">
+		<folder>css</folder>
+		<folder>images</folder>
+	</media>
+	<files>
+		<filename plugin="vmproducts">vmproducts.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>
