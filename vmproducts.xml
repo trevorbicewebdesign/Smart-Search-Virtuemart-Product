@@ -36,7 +36,7 @@
 	<scriptfile>script.php</scriptfile>
 	<files>
 		<file plugin="vmproducts">vmproducts.php</file>
-    	<filename>index.html</filename>
+    		<filename>index.html</filename>
 	</files>
 	<languages>
 		<language tag="en-GB">language/en-GB/en-GB.plg_finder_vmproducts.ini</language>
