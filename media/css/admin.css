@@ -1,0 +1,162 @@
+#extension-description {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-weight:300;
+	font-size:12px;
+	line-height:1.7em;
+}
+#extension-description h1{
+	font-size:24px;
+	font-family:Verdana, Verdana, Geneva, sans-serif;
+	font-weight:300;	
+	color:#328dc6;
+	border-bottom:1px solid #c1e2f7;
+	margin:10px 0px;
+}
+#extension-description h4{
+	margin-bottom:0px;
+	color:#328dc6;
+	width:auto;
+	display:inline-block;
+}
+#extension-description h4 a {
+	color:inherit;	
+}
+#extension-description ul.checkbox {
+	padding-left:14px;
+}
+#extension-description ul.checkbox li {
+	background: url("../../../../media/tbworks/images/ul-checkbox.png") no-repeat scroll 0 9px transparent;
+	padding-left:14px;
+	list-style:none;
+}
+#extension-description hr {
+	border:0px;
+	border-bottom:1px solid #c1e2f7;
+}
+#extension-description ul {
+	padding-left:28px;
+}
+#extension-description ul li {
+	list-style:outside;
+	clear:both;
+	padding:5px 10px;
+}
+#extension-description ul.uniform-menu {
+	display:inline-block;
+}
+#extension-description ul.uniform-menu li {
+	border-right:1px solid #c1e2f7;
+	display:inline-block;
+}
+
+.paramHeaderContainer {
+	background: none repeat scroll 0 0 #D5E7FA;
+	border-bottom: 2px solid #96B0CB;
+	clear: both;
+	color: #336699;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 12px 0 4px;
+	padding: 0;
+	width: 100%;
+}
+.paramHeaderContainer15 {
+	background: none repeat scroll 0 0 #D5E7FA;
+	border-bottom: 2px solid #96B0CB;
+	clear: both;
+	color: #336699;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.paramHeaderContent {
+	padding: 6px 8px;
+}
+.pane-sliders ul.adminformlist {
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+}
+.pane-sliders ul.adminformlist li {
+	clear: both;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	height:30px;;
+}
+.pane-sliders ul.adminformlist li label {
+	background: none repeat scroll 0 0 #F6F6F6;
+	border-bottom: 1px solid #E9E9E9;
+	border-right: 1px solid #E9E9E9;
+	clear: left;
+	color: #666666;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0 4px 1px 0;
+	padding: 4px;
+	text-align: right;
+	width: 140px;
+}
+.pane-sliders ul.adminformlist li fieldset {
+	margin: 0;
+}
+.pane-sliders ul.adminformlist li fieldset label {
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+	clear: none;
+	font-weight: normal;
+	margin: 5px 0;
+	padding: 0;
+	text-align: left;
+	width: auto;
+}
+.pane-sliders ul.adminformlist li select, .pane-sliders ul.adminformlist li textarea, .pane-sliders ul.adminformlist li input[type="text"] {
+	margin: 0;
+}
+body.contentpane ul.config-option-list li > label {
+	background: none repeat scroll 0 0 #F6F6F6;
+	border-bottom: 1px solid #E9E9E9;
+	border-right: 1px solid #E9E9E9;
+	color: #666666;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0 0 1px;
+	padding: 4px;
+	text-align: right;
+	width: 150px;
+}
+body.contentpane div.current select {
+	margin-bottom: 0 !important;
+}
+body.contentpane dl.tabs {
+	padding-left: 8px !important;
+}
+body.contentpane dl.tabs dt.open {
+	background: none repeat scroll 0 0 #FFFFFF !important;
+	border-bottom: 1px solid #FFFFFF !important;
+}
+
+h4.module-heading {
+	margin:0px;
+	padding:5px 20px;
+	margin-left:-20px;
+	margin-top:-12px;
+	margin-bottom:6px;
+	background: none repeat scroll 0 0 #FFFFFF;
+	display: block;
+	position: relative;
+	width: 100%;
+	z-index: 10;
+	height:24px;
+	color:#328dc6;
+	line-height:24px;
+	float:left;
+	font-size:18px;
+	font-weight:normal;
+	font-family: Verdana,Verdana,Geneva,sans-serif;
+	border:1px solid #C1E2F7;
+}
