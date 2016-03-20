@@ -184,7 +184,7 @@ class plgFinderVmproducts extends FinderIndexerAdapter
 		return true;
 	}
 
-	protected function getListQuery($sql = null)
+protected function getListQuery($sql = null)
 	{
 
 		// Get VirtueMart Language config
@@ -213,7 +213,7 @@ class plgFinderVmproducts extends FinderIndexerAdapter
 		$sql->select('p.virtuemart_product_id 			AS id, p.published');
 		$sql->select('
 					  p_lang.product_name 			AS title 
-					, p_lang.slug 					AS alias
+					, p_lang.slug 				AS alias
 					, p_lang.product_desc 			AS summary
 		');
 		$sql->select('
@@ -222,24 +222,27 @@ class plgFinderVmproducts extends FinderIndexerAdapter
 					, p.metaauthor
 					, p.metarobot
 		');
-		$sql->select('p.created_on 							AS start_date, p.published AS state');
+		$sql->select('p.created_on 					AS start_date, p.published AS state');
 		$sql->select('
-					  c.virtuemart_category_id 				AS catid
-					, c.category_name 						AS category
+					  c.virtuemart_category_id 		AS catid
+					, c.category_name 			AS category
 		');
 		$sql->select('
-					  m.virtuemart_manufacturer_id 			AS manid
-					, m.mf_name							AS manufacturer
+					  m.virtuemart_manufacturer_id 		AS manid
+					, m.mf_name				AS manufacturer
 		');
 
 		// Handle the alias CASE WHEN portion of the query
-		$sql->join('LEFT', '#__virtuemart_products_' . $language . ' 			AS p_lang ON p.virtuemart_product_id 			= p_lang.virtuemart_product_id');
-		$sql->join('LEFT', '#__virtuemart_product_categories 					AS xref 	ON xref.virtuemart_product_id 		= p.virtuemart_product_id');
-		$sql->join('LEFT', '#__virtuemart_categories_' . $language . ' 			AS c 	ON c.virtuemart_category_id 			= xref.virtuemart_category_id');
-		$sql->join('LEFT', '#__virtuemart_product_manufacturers				AS mxref 	ON mxref.virtuemart_product_id 		= p.virtuemart_product_id');
-		$sql->join('LEFT', '#__virtuemart_manufacturers_' . $language . ' 		AS m 	ON p.virtuemart_product_id 			= mxref.virtuemart_product_id');
+		$sql->join('LEFT', '#__virtuemart_products_' . $language . ' 		AS p_lang 	ON p.virtuemart_product_id 			= p_lang.virtuemart_product_id');
+		$sql->join('LEFT', '#__virtuemart_product_categories 			AS xref 	ON xref.virtuemart_product_id 		= p.virtuemart_product_id');
+		$sql->join('LEFT', '#__virtuemart_categories				AS cat 		ON cat.virtuemart_category_id 		= xref.virtuemart_category_id');
+		$sql->join('LEFT', '#__virtuemart_categories_' . $language . ' 		AS c 		ON c.virtuemart_category_id 			= xref.virtuemart_category_id');
+		$sql->join('LEFT', '#__virtuemart_product_manufacturers			AS mxref 	ON mxref.virtuemart_product_id 		= p.virtuemart_product_id');
+		$sql->join('LEFT', '#__virtuemart_manufacturers_' . $language . ' 	AS m 		ON p.virtuemart_product_id 			= mxref.virtuemart_product_id');
 		$sql->from('#__virtuemart_products AS p');
 		$sql->where($db->quoteName('p.virtuemart_product_id') . ' > 1');
+		$sql->where( $db->quoteName('p.published') . ' = 1' );
+		$sql->where( $db->quoteName('cat.published') . ' = 1' );
 
 		return $sql;
 	}
@@ -248,9 +251,9 @@ class plgFinderVmproducts extends FinderIndexerAdapter
 	{
 		$sql = $this->db->getQuery(true);
 		$sql->select($this->db->quoteName('p.virtuemart_product_id AS id'));
-		$sql->join('LEFT', '#__virtuemart_category 			AS p_lang ON p.virtuemart_product_id = p_lang.virtuemart_product_id');
-		$sql->select($this->db->quoteName('p.published') . ' 	AS cat_state');
-		$sql->select($this->db->quoteName('a.access') . ' 	AS cat_access');
+		$sql->join('LEFT', '#__virtuemart_category 				AS p_lang ON p.virtuemart_product_id = p_lang.virtuemart_product_id');
+		$sql->select($this->db->quoteName('p.published') . ' 			AS cat_state');
+		$sql->select($this->db->quoteName('a.access') . ' 			AS cat_access');
 		$sql->from($this->db->quoteName('#__virtuemart_products') . ' AS p');
 
 		return $sql;
