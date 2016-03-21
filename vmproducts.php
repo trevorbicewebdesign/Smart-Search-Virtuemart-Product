@@ -240,7 +240,7 @@ protected function getListQuery($sql = null)
 		$sql->join('LEFT', '#__virtuemart_product_manufacturers			AS mxref 	ON mxref.virtuemart_product_id 		= p.virtuemart_product_id');
 		$sql->join('LEFT', '#__virtuemart_manufacturers_' . $language . ' 	AS m 		ON p.virtuemart_product_id 			= mxref.virtuemart_product_id');
 		$sql->from('#__virtuemart_products AS p');
-		$sql->where($db->quoteName('p.virtuemart_product_id') . ' > 1');
+		$sql->where($db->quoteName('p.virtuemart_product_id') . ' > 0');
 		$sql->where( $db->quoteName('p.published') . ' = 1' );
 		$sql->where( $db->quoteName('cat.published') . ' = 1' );
 
