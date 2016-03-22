@@ -229,9 +229,9 @@ class plgFinderVmproducts extends FinderIndexerAdapter
 					, p.published AS state');
 		$sql->select('
 					  c.virtuemart_category_id 				AS catid
-					, c.category_name 						AS category
-					, cat.published 						AS cat_state
+					, c.category_name 					AS category
 		');
+		// $sql->select('		cat.published 						AS cat_state');
 		$sql->select('
 					  m.virtuemart_manufacturer_id 			AS manid
 					, m.mf_name							AS manufacturer
