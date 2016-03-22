@@ -247,7 +247,8 @@ class plgFinderVmproducts extends FinderIndexerAdapter
 		$sql->from('#__virtuemart_products AS p');
 		$sql->where($db->quoteName('p.virtuemart_product_id') . ' > 0');
 		$sql->where( $db->quoteName('p.published') . ' = 1' );
-		$sql->where( $db->quoteName('cat.published') . ' = 1' );
+		// What if the product is not a member of a category? or two categories?
+		// $sql->where( $db->quoteName('cat.published') . ' = 1' );
 
 		return $sql;
 	}
