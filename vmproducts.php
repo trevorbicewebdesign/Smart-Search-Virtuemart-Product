@@ -154,7 +154,7 @@ class plgFinderVmproducts extends FinderIndexerAdapter
 		// Translate the state. Articles should only be published if the category is published.
 		$item->state = $this->translateState($item->state, $item->cat_state);
 	
-		
+		$item->access 		= 1;
 
 		// Add the type taxonomy data.
 		$item->addTaxonomy('Type', 'VM Product');
